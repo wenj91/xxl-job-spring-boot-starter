@@ -1,0 +1,31 @@
+plugins {
+    id 'java'
+}
+
+group 'cn.zzstc'
+version '1.0-SNAPSHOT'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    compile 'org.springframework.boot:spring-boot-autoconfigure:2.1.11.RELEASE'
+    compile 'org.springframework.boot:spring-boot-configuration-processor:2.1.11.RELEASE'
+
+    // https://mvnrepository.com/artifact/com.xuxueli/xxl-job-core
+    compile 'com.xuxueli:xxl-job-core:2.3.0'
+
+    compileOnly 'org.projectlombok:lombok:1.18.16'
+    annotationProcessor 'org.projectlombok:lombok:1.18.16'
+
+    testCompileOnly 'org.projectlombok:lombok:1.18.16'
+    testAnnotationProcessor 'org.projectlombok:lombok:1.18.16'
+
+    testImplementation 'org.junit.jupiter:junit-jupiter-api:5.6.0'
+    testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine'
+}
+
+test {
+    useJUnitPlatform()
+}
